@@ -1,0 +1,26 @@
+{
+  "name": "Copy Paste Order",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://shoppingcart.aliexpress.com/*"],
+      "js": ["jquery.js"]
+    },
+    {
+      "matches": ["https://shoppingcart.aliexpress.com/*"],
+      "js": ["jquery.sendkeys.js"]
+    },
+    {
+      "matches": ["https://shoppingcart.aliexpress.com/*"],
+      "css": ["style.css"],
+      "js": ["script.js"]
+    }
+  ]
+}
