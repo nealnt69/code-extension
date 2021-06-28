@@ -3,17 +3,14 @@ function timeout(ms) {
 }
 
 $(document).ready(function () {
-  const showPaste = sessionStorage.getItem("show-paste");
-  if (showPaste) {
-    document.body.insertAdjacentHTML(
-      "beforeend",
-      `
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `
                               <div class="wrap-copy-paste">
                                   <div id="button-paste">Paste</div>
                               </div>
                         `
-    );
-  }
+  );
 
   $("#button-paste").click(async function () {
     try {
