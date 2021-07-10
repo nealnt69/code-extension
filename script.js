@@ -52,6 +52,7 @@ $(document).ready(function () {
       $("#zip").val(dataCopy.code);
       $("#zip").sendkeys(" ");
     } catch (error) {
+      console.log(error);
       alert("Vui lòng copy trước");
     }
   });
